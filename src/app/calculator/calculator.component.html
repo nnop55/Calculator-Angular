@@ -1,0 +1,46 @@
+<body>
+    <div class="theme-toggler">
+        <i [class]="toggleIcon" (click)="themeToggleBtn()"></i>
+    </div>
+    <div class="container" [ngClass]="{'containerLight':toggleTheme.toggleItem}">
+        <div class="calculator" [ngClass]="{'calculatorLight':toggleTheme.toggleItem}">
+            <div class="display-screen">
+                <div class="display" [ngClass]="{'displayLight':toggleTheme.toggleItem}">{{displayDivController}}</div>
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td *ngFor="let item of first"><button [class]="item.class" [id]="item.id"
+                                (click)="calculateResult(item)"
+                                [ngClass]="{'btnLight':toggleTheme.toggleItem}">{{item.button}}</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let item of second"><button [class]="item.class" [id]="item.id"
+                                (click)="calculateResult(item)"
+                                [ngClass]="{'btnLight':toggleTheme.toggleItem}">{{item.button}}</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let item of third"><button [class]="item.class" [id]="item.id"
+                                (click)="calculateResult(item)"
+                                [ngClass]="{'btnLight':toggleTheme.toggleItem}">{{item.button}}</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let item of fourth" [rowSpan]="item.rowspan"><button [class]="item.class"
+                                [id]="item.id" (click)="calculateResult(item)"
+                                [ngClass]="{'btnLight':toggleTheme.toggleItem}">{{item.button}}</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let item of fifthy"><button [class]="item.class" [id]="item.id"
+                                (click)="calculateResult(item)"
+                                [ngClass]="{'btnLight':toggleTheme.toggleItem}">{{item.button}}</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

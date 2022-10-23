@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body {
+    background: linear-gradient(to bottom right, rgb(9 77 103), rgb(110 5 5));
+    height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    font-family: 'Satisfy', cursive;
+}
